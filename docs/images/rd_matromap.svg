@@ -2,13 +2,16 @@
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 
 <svg
-   width="173.27443mm"
-   height="84.981041mm"
-   viewBox="0 0 173.27443 84.981041"
+   width="37.127441cm"
+   height="32.4981cm"
+   viewBox="0 0 371.27441 324.981"
    version="1.1"
    id="svg5"
    inkscape:version="1.1.2 (b8e25be8, 2022-02-05)"
    sodipodi:docname="rd_copy.svg"
+   inkscape:export-filename="/Users/sima/Desktop/rd_copy.png"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
@@ -24,24 +27,26 @@
      inkscape:document-units="mm"
      showgrid="false"
      showguides="false"
-     showborder="false"
+     showborder="true"
      inkscape:zoom="0.76095916"
-     inkscape:cx="810.16174"
-     inkscape:cy="791.76391"
-     inkscape:window-width="1843"
-     inkscape:window-height="969"
-     inkscape:window-x="2392"
-     inkscape:window-y="76"
+     inkscape:cx="682.03397"
+     inkscape:cy="599.90079"
+     inkscape:window-width="2111"
+     inkscape:window-height="1191"
+     inkscape:window-x="2124"
+     inkscape:window-y="25"
      inkscape:window-maximized="0"
-     inkscape:current-layer="layer1"
+     inkscape:current-layer="layer2"
      inkscape:object-nodes="false"
-     inkscape:snap-page="true" />
+     inkscape:snap-page="true"
+     units="cm"
+     width="37.12744cm" />
   <defs
      id="defs2">
     <rect
-       x="584.78828"
+       x="584.78827"
        y="-250.99902"
-       width="88.046775"
+       width="88.046776"
        height="38.109798"
        id="rect4320" />
     <rect
@@ -195,36 +200,6 @@
            style="fill:#ffffff;stroke-width:0.435688" />
       </g>
     </g>
-    <text
-       transform="matrix(1.0008413,-0.00331891,-0.05487463,0.99934134,0,0)"
-       inkscape:export-ydpi="90"
-       inkscape:export-xdpi="90"
-       inkscape:export-filename="./polygon4618.png"
-       id="text6799-6"
-       y="-85.863724"
-       x="-60.035995"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333px;line-height:1.25;font-family:'Maven Pro';-inkscape-font-specification:'Maven Pro, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.438426"
-       xml:space="preserve"><tspan
-         sodipodi:role="line"
-         id="tspan43752"
-         x="-60.035995"
-         y="-85.863724">Markduplicates</tspan></text>
-    <text
-       transform="matrix(0.68682489,-0.7279876,0.68682489,0.7279876,0,0)"
-       inkscape:export-ydpi="90"
-       inkscape:export-xdpi="90"
-       inkscape:export-filename="./polygon4618.png"
-       id="text706-6"
-       y="-70.471809"
-       x="11.877168"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.84562px;line-height:1.25;font-family:'Maven Pro';-inkscape-font-specification:'Maven Pro, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.438426"
-       xml:space="preserve"
-       inkscape:transform-center-x="25.61057"
-       inkscape:transform-center-y="-10.739917"><tspan
-         sodipodi:role="line"
-         id="tspan43665"
-         x="11.877168"
-         y="-70.471809">Picard</tspan></text>
     <g
        id="g43916-9"
        transform="matrix(0.804,0,0,0.7988874,-190.71437,-159.57851)">
@@ -551,7 +526,7 @@
          y="178.29059" /></text>
     <g
        id="g74640"
-       transform="translate(24.137136,70.777233)">
+       transform="translate(-97.209169,207.07452)">
       <rect
          ry="1.8092705"
          rx="1.5291866"
@@ -578,25 +553,14 @@
            x="332.93027"
            y="116.42476">Annotation</tspan></text>
     </g>
-    <path
-       inkscape:connector-curvature="0"
-       style="fill:none;stroke:#002b6b;stroke-width:2.64583;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       d="m -119.66552,-117.13218 h -7.9375 c -3.94417,0 -7.80125,2.49585 -10.58334,5.29166 l -2.57804,2.59074 -2.71365,2.70094 c -2.78896,2.78894 -6.63916,4.76248 -10.58335,4.76248 h -8.4667"
-       id="path1232-7-2-7-6"
-       sodipodi:nodetypes="csscssc" />
-    <path
-       inkscape:connector-curvature="0"
-       style="fill:none;stroke:#002b6b;stroke-width:2.64583;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       d="m -120.20546,-128.06223 c -2.79889,0.0454 -5.45013,0.047 -7.93749,0 -3.94347,-0.0744 -7.89553,-2.40509 -10.58333,-5.29166 l -2.50503,-2.69027 -0.0614,-0.13991 -2.19604,-2.26516 c -2.74541,-2.83183 -6.63916,-5.29166 -10.58333,-5.29166 h -7.9375"
-       id="path1232-7-6-1"
-       sodipodi:nodetypes="cssccssc" />
     <text
        xml:space="preserve"
        transform="matrix(0.26458333,0,0,0.26458333,16.41,35.878151)"
        id="text4318"
        style="font-size:24px;line-height:1.25;font-family:'Maven Pro';-inkscape-font-specification:'Maven Pro, Normal';white-space:pre;shape-inside:url(#rect4320)" />
     <g
-       id="g9789">
+       id="g9789"
+       transform="translate(-8.3447319,-61.890093)">
       <rect
          ry="4.0403261"
          rx="1.6093713"
@@ -778,7 +742,8 @@
            y="260.68094">Tiddit's cov</tspan></text>
     </g>
     <g
-       id="g13356">
+       id="g13356"
+       transform="translate(41.028263,-65.714762)">
       <rect
          ry="2.5046644"
          rx="1.5291866"
@@ -1269,19 +1234,20 @@
       </g>
     </g>
     <g
-       id="g9855">
+       id="g2535">
       <rect
          ry="3.0986466"
          rx="1.214175"
-         y="-327.05759"
-         x="4.9575343"
+         y="-294.02637"
+         x="42.508827"
          height="74.367561"
          width="73.708656"
          id="rect6693-4-6-6-6-5-1"
          style="display:inline;fill:#e6e6e6;fill-opacity:1;stroke:none;stroke-width:0.827992;stroke-linecap:butt;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:normal"
          transform="rotate(90)" />
       <g
-         id="g9824">
+         id="g9824"
+         transform="translate(-33.03123,37.551293)">
         <ellipse
            cy="-23.376297"
            cx="275.09668"
@@ -1306,7 +1272,8 @@
              y="17.30472">DeepVarinat</tspan></text>
       </g>
       <g
-         id="g9829">
+         id="g9829"
+         transform="translate(-33.03123,37.551293)">
         <ellipse
            cy="-56.088875"
            cx="275.64111"
@@ -1332,7 +1299,7 @@
       </g>
       <g
          id="g9834"
-         transform="translate(5.2916669,1.0583333)">
+         transform="translate(-27.739563,38.609626)">
         <ellipse
            cy="-55.364441"
            cx="300.78049"
@@ -1362,36 +1329,35 @@
          inkscape:export-xdpi="90"
          inkscape:export-filename="./polygon4618.png"
          id="text3914-5-0"
-         y="72.477425"
-         x="267.21155"
+         y="108.48885"
+         x="232.77231"
          style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:3.61151px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.270864"
          xml:space="preserve"
          inkscape:transform-center-x="12.262569"
          inkscape:transform-center-y="8.6264934"><tspan
            sodipodi:role="line"
            id="tspan8117"
-           x="267.21155"
-           y="72.477425">Varinat Calling -SNV</tspan></text>
+           x="232.77231"
+           y="108.48885">Varinat Calling -SNV</tspan></text>
       <g
-         id="g9763"
-         transform="translate(5.8208336,1.5875)">
+         id="g2514">
         <text
            transform="matrix(1.0008413,-0.00331891,-0.05487463,0.99934137,0,0)"
            inkscape:export-ydpi="90"
            inkscape:export-xdpi="90"
            inkscape:export-filename="./polygon4618.png"
            id="text6799-6-9-3-9"
-           y="15.937979"
-           x="286.47028"
+           y="55.01939"
+           x="261.42554"
            style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333px;line-height:1.25;font-family:'Maven Pro';-inkscape-font-specification:'Maven Pro, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.438426"
            xml:space="preserve"><tspan
              sodipodi:role="line"
-             id="tspan8951"
-             x="286.47028"
-             y="15.937979">GLnexus</tspan></text>
+             id="tspan2509"
+             x="261.42554"
+             y="55.01939">GLNEXUS</tspan></text>
         <ellipse
-           cy="-21.970264"
-           cx="294.91541"
+           cy="-61.109058"
+           cx="267.70502"
            id="circle1664-8-0-66-5-1-5"
            style="display:inline;fill:#ffffff;fill-rule:evenodd;stroke:#000000;stroke-width:1.32813;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
            transform="scale(1,-1)"
@@ -1400,7 +1366,8 @@
       </g>
     </g>
     <g
-       id="g9819">
+       id="g9819"
+       transform="translate(-76.841075,99.441385)">
       <rect
          ry="2.7509496"
          rx="1.214175"
@@ -1503,83 +1470,87 @@
            x="265.57333"
            y="162.19313">Varinat Calling - SV</tspan></text>
     </g>
-    <rect
-       ry="3.229033"
-       rx="0.9220733"
-       y="-322.71136"
-       x="209.3806"
-       height="77.496834"
-       width="55.976101"
-       id="rect6693-4-6-6-6-5-1-0"
-       style="display:inline;fill:#e6e6e6;fill-opacity:1;stroke:none;stroke-width:0.736578;stroke-linecap:butt;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:normal"
-       transform="rotate(90)" />
     <g
-       id="g9738"
-       transform="translate(-1.3907886,24.082555)">
-      <ellipse
-         cy="-208.87273"
-         cx="269.35968"
-         id="circle1664-8-0-66-2"
-         style="display:inline;fill:#ffffff;fill-rule:evenodd;stroke:#000000;stroke-width:1.32813;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         transform="scale(1,-1)"
-         rx="3.4258752"
-         ry="3.6043594" />
-      <text
-         transform="matrix(1.0008413,-0.00331891,-0.05487463,0.99934137,0,0)"
-         inkscape:export-ydpi="90"
-         inkscape:export-xdpi="90"
-         inkscape:export-filename="./polygon4618.png"
-         id="text6799-6-9-4"
-         y="202.92061"
-         x="261.47961"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333px;line-height:1.25;font-family:'Maven Pro';-inkscape-font-specification:'Maven Pro, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.438426"
-         xml:space="preserve"><tspan
-           sodipodi:role="line"
-           id="tspan9513"
+       id="g1070"
+       transform="translate(-19.818738,-84.838106)">
+      <rect
+         ry="3.229033"
+         rx="0.9220733"
+         y="-320.2775"
+         x="213.55296"
+         height="77.496834"
+         width="55.976101"
+         id="rect6693-4-6-6-6-5-1-0"
+         style="display:inline;fill:#e6e6e6;fill-opacity:1;stroke:none;stroke-width:0.736578;stroke-linecap:butt;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:normal"
+         transform="rotate(90)" />
+      <g
+         id="g9738"
+         transform="translate(-1.3907886,24.082555)">
+        <ellipse
+           cy="-208.87273"
+           cx="269.35968"
+           id="circle1664-8-0-66-2"
+           style="display:inline;fill:#ffffff;fill-rule:evenodd;stroke:#000000;stroke-width:1.32813;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           transform="scale(1,-1)"
+           rx="3.4258752"
+           ry="3.6043594" />
+        <text
+           transform="matrix(1.0008413,-0.00331891,-0.05487463,0.99934137,0,0)"
+           inkscape:export-ydpi="90"
+           inkscape:export-xdpi="90"
+           inkscape:export-filename="./polygon4618.png"
+           id="text6799-6-9-4"
+           y="202.92061"
            x="261.47961"
-           y="202.92061">Expansion Hunter</tspan></text>
-    </g>
-    <g
-       id="g9743"
-       transform="translate(33.03123,-8.6924288)">
-      <ellipse
-         cy="-241.58531"
-         cx="269.90411"
-         id="circle1664-8-0-78-9"
-         style="display:inline;fill:#ffffff;fill-rule:evenodd;stroke:#000000;stroke-width:1.32813;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         transform="scale(1,-1)"
-         rx="3.4258752"
-         ry="3.6043594" />
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333px;line-height:1.25;font-family:'Maven Pro';-inkscape-font-specification:'Maven Pro, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.438426"
+           xml:space="preserve"><tspan
+             sodipodi:role="line"
+             id="tspan9513"
+             x="261.47961"
+             y="202.92061">Expansion Hunter</tspan></text>
+      </g>
+      <g
+         id="g9743"
+         transform="translate(33.03123,-8.6924288)">
+        <ellipse
+           cy="-241.58531"
+           cx="269.90411"
+           id="circle1664-8-0-78-9"
+           style="display:inline;fill:#ffffff;fill-rule:evenodd;stroke:#000000;stroke-width:1.32813;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           transform="scale(1,-1)"
+           rx="3.4258752"
+           ry="3.6043594" />
+        <text
+           transform="matrix(1.0008413,-0.00331891,-0.05487463,0.99934137,0,0)"
+           inkscape:export-ydpi="90"
+           inkscape:export-xdpi="90"
+           inkscape:export-filename="./polygon4618.png"
+           id="text6799-6-19-2"
+           y="235.34627"
+           x="272.92523"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333px;line-height:1.25;font-family:'Maven Pro';-inkscape-font-specification:'Maven Pro, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.438426"
+           xml:space="preserve"><tspan
+             sodipodi:role="line"
+             id="tspan9533"
+             x="272.92523"
+             y="235.34627">Stranger</tspan></text>
+      </g>
       <text
-         transform="matrix(1.0008413,-0.00331891,-0.05487463,0.99934137,0,0)"
+         transform="matrix(0.95740028,0.0018107,-0.00164081,1.0444921,0,0)"
          inkscape:export-ydpi="90"
          inkscape:export-xdpi="90"
          inkscape:export-filename="./polygon4618.png"
-         id="text6799-6-19-2"
-         y="235.34627"
-         x="272.92523"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333px;line-height:1.25;font-family:'Maven Pro';-inkscape-font-specification:'Maven Pro, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.438426"
-         xml:space="preserve"><tspan
-           sodipodi:role="line"
-           id="tspan9533"
-           x="272.92523"
-           y="235.34627">Stranger</tspan></text>
-    </g>
-    <text
-       transform="matrix(0.95740028,0.0018107,-0.00164081,1.0444921,0,0)"
-       inkscape:export-ydpi="90"
-       inkscape:export-xdpi="90"
-       inkscape:export-filename="./polygon4618.png"
-       id="text3914-5-0-2"
-       y="250.08215"
-       x="261.52365"
-       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:3.61151px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.270864"
-       xml:space="preserve"
-       inkscape:transform-center-x="12.262569"
-       inkscape:transform-center-y="8.6264934"><tspan
-         sodipodi:role="line"
-         id="tspan9733"
+         id="text3914-5-0-2"
+         y="250.08215"
          x="261.52365"
-         y="250.08215">Varinat Calling- repeat expnasions</tspan></text>
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:3.61151px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.270864"
+         xml:space="preserve"
+         inkscape:transform-center-x="12.262569"
+         inkscape:transform-center-y="8.6264934"><tspan
+           sodipodi:role="line"
+           id="tspan9733"
+           x="261.52365"
+           y="250.08215">Varinat Calling- repeat expnasions</tspan></text>
+    </g>
   </g>
 </svg>
