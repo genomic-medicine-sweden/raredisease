@@ -8,7 +8,6 @@ include { BCFTOOLS_MERGE                             } from '../../../modules/nf
 include { BCFTOOLS_NORM as SPLIT_MULTIALLELICS_SEN   } from '../../../modules/nf-core/bcftools/norm/main'
 include { BCFTOOLS_NORM as REMOVE_DUPLICATES_SEN     } from '../../../modules/nf-core/bcftools/norm/main'
 include { TABIX_TABIX as TABIX_SEN                   } from '../../../modules/nf-core/tabix/tabix/main'
-include { TABIX_TABIX as TABIX_BCFTOOLS              } from '../../../modules/nf-core/tabix/tabix/main'
 include { BCFTOOLS_FILTER as BCF_FILTER_ONE          } from '../../../modules/nf-core/bcftools/filter/main'
 include { BCFTOOLS_FILTER as BCF_FILTER_TWO          } from '../../../modules/nf-core/bcftools/filter/main'
 include { BCFTOOLS_ANNOTATE                          } from '../../../modules/nf-core/bcftools/annotate/main'
@@ -54,13 +53,13 @@ workflow CALL_SNV_SENTIEON {
 
         SENTIEON_DNAMODELAPPLY ( ch_dnamodelapply_in, ch_genome_fasta, ch_genome_fai, ch_ml_model )
 
-        BCF_FILTER_ONE (SENTIEON_DNAMODELAPPLY.out.vcf )
+        ch_bcffilterone_in = SENTIEON_DNAMODELAPPLY.out.vcf.join(SENTIEON_DNAMODELAPPLY.out.index, failOnMismatch: true)
+        BCF_FILTER_ONE (ch_bcffilterone_in)
 
-        BCF_FILTER_TWO ( BCF_FILTER_ONE.out.vcf )
+        ch_bcffiltertwo_in = BCF_FILTER_ONE.out.vcf.join(BCF_FILTER_ONE.out.tbi, failOnMismatch: true)
+        BCF_FILTER_TWO ( ch_bcffiltertwo_in )
 
-        TABIX_BCFTOOLS ( BCF_FILTER_TWO.out.vcf )
-
-        BCF_FILTER_TWO.out.vcf.join(TABIX_BCFTOOLS.out.tbi, failOnMismatch:true, failOnDuplicate:true)
+        BCF_FILTER_TWO.out.vcf.join(BCF_FILTER_TWO.out.tbi, failOnMismatch:true, failOnDuplicate:true)
             .map { meta,vcf,tbi -> return [vcf,tbi] }
             .set { ch_vcf_idx }
 
@@ -116,6 +115,7 @@ workflow CALL_SNV_SENTIEON {
         ch_versions = ch_versions.mix(REMOVE_DUPLICATES_SEN.out.versions.first())
         ch_versions = ch_versions.mix(TABIX_SEN.out.versions.first())
         ch_versions = ch_versions.mix(BCF_FILTER_ONE.out.versions.first())
+        ch_versions = ch_versions.mix(BCF_FILTER_TWO.out.versions.first())
         ch_versions = ch_versions.mix(ADD_VARCALLER_TO_BED.out.versions)
         ch_versions = ch_versions.mix(BCFTOOLS_ANNOTATE.out.versions)
         ch_versions = ch_versions.mix(TABIX_ANNOTATE.out.versions)

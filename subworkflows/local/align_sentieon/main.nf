@@ -45,6 +45,9 @@ workflow ALIGN_SENTIEON {
             ch_bam_bai = EXTRACT_ALIGNMENTS.out.bam
             SAMTOOLS_INDEX_EXTRACT ( EXTRACT_ALIGNMENTS.out.bam )
             ch_bam_bai = EXTRACT_ALIGNMENTS.out.bam.join(SAMTOOLS_INDEX_EXTRACT.out.bai, failOnMismatch:true, failOnDuplicate:true)
+            ch_versions = ch_versions.mix(EXTRACT_ALIGNMENTS.out.versions.first())
+            ch_versions = ch_versions.mix(SAMTOOLS_INDEX_EXTRACT.out.versions.first())
+
         }
 
         SENTIEON_DATAMETRICS ( ch_bam_bai, ch_genome_fasta, ch_genome_fai, false )
@@ -53,6 +56,7 @@ workflow ALIGN_SENTIEON {
 
         ch_versions = ch_versions.mix(SENTIEON_BWAMEM.out.versions.first())
         ch_versions = ch_versions.mix(SENTIEON_DATAMETRICS.out.versions.first())
+        ch_versions = ch_versions.mix(SENTIEON_READWRITER.out.versions.first())
         ch_versions = ch_versions.mix(SENTIEON_DEDUP.out.versions.first())
 
     emit:

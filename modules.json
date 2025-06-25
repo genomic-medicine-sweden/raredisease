@@ -455,7 +455,7 @@
                     },
                     "spring/decompress": {
                         "branch": "master",
-                        "git_sha": "d7462e71f9129083ce10c3fe953ed401781e0ebd",
+                        "git_sha": "05954dab2ff481bcb999f24455da29a5828af08d",
                         "installed_by": ["modules"]
                     },
                     "stranger": {

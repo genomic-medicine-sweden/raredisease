@@ -130,6 +130,9 @@ workflow POSTPROCESS_MT_CALLS {
         ch_versions = ch_versions.mix(ADD_VARCALLER_TO_BED.out.versions)
         ch_versions = ch_versions.mix(BCFTOOLS_ANNOTATE.out.versions)
         ch_versions = ch_versions.mix(TABIX_ANNOTATE.out.versions)
+        ch_versions = ch_versions.mix(TABIX_TABIX_MERGE.out.versions)
+        ch_versions = ch_versions.mix(TABIX_TABIX_MT.out.versions)
+        ch_versions = ch_versions.mix(TABIX_TABIX_MT2.out.versions)
 
     emit:
         vcf       = BCFTOOLS_ANNOTATE.out.vcf   // channel: [ val(meta), path(vcf) ]

@@ -16,12 +16,13 @@ workflow CALL_SV_MT {
         ch_eklipse_genes  = Channel.empty()
         ch_eklipse_circos = Channel.empty()
 
-        EKLIPSE(ch_bam_bai,[])
-        ch_eklipse_del    = EKLIPSE.out.deletions
-        ch_eklipse_genes  = EKLIPSE.out.genes
-        ch_eklipse_circos = EKLIPSE.out.circos
-        ch_versions = ch_versions.mix(EKLIPSE.out.versions.first())
-
+        if (!(params.skip_tools && params.skip_tools.split(',').contains('eklipse'))) {
+            EKLIPSE(ch_bam_bai,[])
+            ch_eklipse_del    = EKLIPSE.out.deletions
+            ch_eklipse_genes  = EKLIPSE.out.genes
+            ch_eklipse_circos = EKLIPSE.out.circos
+            ch_versions = ch_versions.mix(EKLIPSE.out.versions.first())
+        }
         MT_DELETION(ch_bam_bai, ch_fasta)
 
         ch_versions = ch_versions.mix(MT_DELETION.out.versions.first())

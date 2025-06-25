@@ -31,6 +31,7 @@ workflow CALL_SNV_DEEPVARIANT {
             ch_bam_bai
                 .combine (TABIX_BGZIP.out.output.map {meta, bed -> return bed})
                 .set { ch_deepvar_in }
+            ch_versions = ch_versions.mix(TABIX_BGZIP.out.versions)
         } else if (params.analysis_type.equals("wgs")) {
             ch_bam_bai
                 .map { meta, bam, bai ->

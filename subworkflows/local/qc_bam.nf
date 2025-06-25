@@ -39,6 +39,7 @@ workflow QC_BAM {
         ch_cov_y    = Channel.empty()
         ch_versions = Channel.empty()
         ch_qualimap = Channel.empty()
+        ch_ngsbits  = Channel.empty()
 
         PICARD_COLLECTMULTIPLEMETRICS (ch_bam_bai, ch_genome_fasta, ch_genome_fai)
 
@@ -48,10 +49,10 @@ workflow QC_BAM {
             .set { ch_hsmetrics_in}
 
         PICARD_COLLECTHSMETRICS (ch_hsmetrics_in, ch_genome_fasta, ch_genome_fai, [[],[]])
-
-        ch_qualimap = QUALIMAP_BAMQC (ch_bam, []).results
-        ch_versions = ch_versions.mix(QUALIMAP_BAMQC.out.versions.first())
-
+        if (!(params.skip_tools && params.skip_tools.split(',').contains('qualimap'))) {
+            ch_qualimap = QUALIMAP_BAMQC (ch_bam, []).results
+            ch_versions = ch_versions.mix(QUALIMAP_BAMQC.out.versions.first())
+        }
         TIDDIT_COV (ch_bam, [[],[]]) // 2nd pos. arg is req. only for cram input
 
         UCSC_WIGTOBIGWIG (TIDDIT_COV.out.wig, ch_chrom_sizes)
@@ -73,8 +74,11 @@ workflow QC_BAM {
             ch_versions = ch_versions.mix(PICARD_COLLECTWGSMETRICS_Y.out.versions.first(), SENTIEON_WGSMETRICS_Y.out.versions.first())
         }
         // Check sex
-        NGSBITS_SAMPLEGENDER(ch_bam_bai, ch_genome_fasta, ch_genome_fai, ngsbits_samplegender_method)
-
+        if (!(params.skip_tools && params.skip_tools.split(',').contains('ngsbits'))) {
+            NGSBITS_SAMPLEGENDER(ch_bam_bai, ch_genome_fasta, ch_genome_fai, ngsbits_samplegender_method)
+            ch_ngsbits  = NGSBITS_SAMPLEGENDER.out.tsv
+            ch_versions = ch_versions.mix(NGSBITS_SAMPLEGENDER.out.versions.first())
+        }
         // Check contamination
         ch_svd_in = ch_svd_ud.combine(ch_svd_mu).combine(ch_svd_bed).collect()
         VERIFYBAMID_VERIFYBAMID2(ch_bam_bai, ch_svd_in, [], ch_genome_fasta.map {it-> it[1]})
@@ -85,7 +89,6 @@ workflow QC_BAM {
         ch_versions = ch_versions.mix(TIDDIT_COV.out.versions.first())
         ch_versions = ch_versions.mix(UCSC_WIGTOBIGWIG.out.versions.first())
         ch_versions = ch_versions.mix(MOSDEPTH.out.versions.first())
-        ch_versions = ch_versions.mix(NGSBITS_SAMPLEGENDER.out.versions.first())
         ch_versions = ch_versions.mix(VERIFYBAMID_VERIFYBAMID2.out.versions.first())
 
     emit:
@@ -96,7 +99,7 @@ workflow QC_BAM {
         bigwig           = UCSC_WIGTOBIGWIG.out.bw                   // channel: [ val(meta), path(bw) ]
         d4               = MOSDEPTH.out.per_base_d4                  // channel: [ val(meta), path(d4) ]
         global_dist      = MOSDEPTH.out.global_txt                   // channel: [ val(meta), path(txt) ]
-        sex_check        = NGSBITS_SAMPLEGENDER.out.tsv              // channel: [ val(meta), path(tsv) ]
+        sex_check        = ch_ngsbits                                // channel: [ val(meta), path(tsv) ]
         self_sm          = VERIFYBAMID_VERIFYBAMID2.out.self_sm      // channel: [ val(meta), path(selfSM) ]
         cov              = ch_cov                                    // channel: [ val(meta), path(metrics) ]
         cov_y            = ch_cov_y                                  // channel: [ val(meta), path(metrics) ]
