@@ -3,6 +3,12 @@
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## v2.5.1 - Fulliautomatix (patch) [2025-07-04]
+
+### `Changed`
+
+- Split multiallelics and remove duplicates after merging mitochondrial variants from multiple samples. [#697](https://github.com/nf-core/raredisease/pull/697)
+
 ## v2.5.0 - Fulliautomatix [2025-05-22]
 
 ### `Added`
