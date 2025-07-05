@@ -6,20 +6,20 @@
                     {
                         "groupSize": 1,
                         "groupTarget": {
-                            "id": "hugelymodelbat",
-                            "sample": "hugelymodelbat",
+                            "id": "earlycasualcaiman",
+                            "sample": "earlycasualcaiman",
                             "single_end": false,
                             "num_lanes": 1,
-                            "read_group": "'@RG\\tID:hugelymodelbat\\tPL:illumina\\tSM:hugelymodelbat'",
+                            "read_group": "'@RG\\tID:earlycasualcaiman\\tPL:illumina\\tSM:earlycasualcaiman'",
                             "sex": 1,
-                            "phenotype": 2,
-                            "paternal": "earlycasualcaiman",
-                            "maternal": "slowlycivilbuck",
+                            "phenotype": 1,
+                            "paternal": 0,
+                            "maternal": 0,
                             "case_id": "justhusky"
                         }
                     },
-                    "5826e0ede26849bd789600cb576607c6",
-                    "hugelymodelbat_sorted_md.bam.bai:md5,60666327a06035997be296c2636c313c"
+                    "52242c5e2e04e75b0f50c4c13467cfcb",
+                    "earlycasualcaiman_sorted_md.bam.bai:md5,9f4b2ef1c24bd6fd6660b1958aed50ff"
                 ]
             ],
             [
@@ -27,20 +27,20 @@
                     {
                         "groupSize": 1,
                         "groupTarget": {
-                            "id": "hugelymodelbat",
-                            "sample": "hugelymodelbat",
+                            "id": "earlycasualcaiman",
+                            "sample": "earlycasualcaiman",
                             "single_end": false,
                             "num_lanes": 1,
-                            "read_group": "'@RG\\tID:hugelymodelbat\\tPL:illumina\\tSM:hugelymodelbat'",
+                            "read_group": "'@RG\\tID:earlycasualcaiman\\tPL:illumina\\tSM:earlycasualcaiman'",
                             "sex": 1,
-                            "phenotype": 2,
-                            "paternal": "earlycasualcaiman",
-                            "maternal": "slowlycivilbuck",
+                            "phenotype": 1,
+                            "paternal": 0,
+                            "maternal": 0,
                             "case_id": "justhusky"
                         }
                     },
-                    "b18998c8cf7dc417ca9a122ba1c9403d",
-                    "hugelymodelbat_sorted_merged_md_sorted.bam.bai:md5,ebc9222d03624e276c0c242e87e6618c"
+                    "9beeefe789d896c08d55e8b8d13d9623",
+                    "earlycasualcaiman_sorted_merged_md_sorted.bam.bai:md5,d8870681672ce9c1b5799bcfc28a8040"
                 ]
             ],
             [
@@ -48,20 +48,20 @@
                     {
                         "groupSize": 1,
                         "groupTarget": {
-                            "id": "hugelymodelbat",
-                            "sample": "hugelymodelbat",
+                            "id": "earlycasualcaiman",
+                            "sample": "earlycasualcaiman",
                             "single_end": false,
                             "num_lanes": 1,
-                            "read_group": "'@RG\\tID:hugelymodelbat\\tPL:illumina\\tSM:hugelymodelbat'",
+                            "read_group": "'@RG\\tID:earlycasualcaiman\\tPL:illumina\\tSM:earlycasualcaiman'",
                             "sex": 1,
-                            "phenotype": 2,
-                            "paternal": "earlycasualcaiman",
-                            "maternal": "slowlycivilbuck",
+                            "phenotype": 1,
+                            "paternal": 0,
+                            "maternal": 0,
                             "case_id": "justhusky"
                         }
                     },
-                    "97e6eaae1cda668da59e5c16a9bbcc1d",
-                    "hugelymodelbat_sorted_merged_md_sorted_shifted.bam.bai:md5,f9a4e5c7c7ca7c25f365bee4cfcdb3a9"
+                    "130fb09f419109e40a6be267bfbd8c88",
+                    "earlycasualcaiman_sorted_merged_md_sorted_shifted.bam.bai:md5,4d92948adf094d3ddede8b7bd7e6ee3e"
                 ]
             ],
             [
@@ -95,7 +95,7 @@
             "nf-test": "0.9.2",
             "nextflow": "25.04.3"
         },
-        "timestamp": "2025-06-25T17:24:58.017903349"
+        "timestamp": "2025-07-05T11:05:46.341290772"
     },
     "align bwameme": {
         "content": [

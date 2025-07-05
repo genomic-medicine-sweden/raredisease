@@ -108,9 +108,9 @@ nextflow_workflow {
             assertAll(
                 { assert workflow.success },
                 { assert snapshot(
-                        workflow.out.genome_bam_bai.collect { meta, bamfile, index -> [ meta, bam(bamfile).getHeaderMD5(), index ] },
-                        workflow.out.mt_bam_bai.collect { meta, bamfile, index -> [ meta, bam(bamfile).getReadsMD5(), index ] },
-                        workflow.out.mtshift_bam_bai.collect { meta, bamfile, index -> [ meta, bam(bamfile).getReadsMD5(), index ] },
+                        workflow.out.genome_bam_bai.collect { meta, bamfile, index -> [ meta, bam(bamfile).getHeaderMD5(), index ] }.sort { it[0].id },
+                        workflow.out.mt_bam_bai.collect { meta, bamfile, index -> [ meta, bam(bamfile).getReadsMD5(), index ] }.sort { it[0].id },
+                        workflow.out.mtshift_bam_bai.collect { meta, bamfile, index -> [ meta, bam(bamfile).getReadsMD5(), index ] }.sort { it[0].id },
                         workflow.out.versions
                     ).match()
                 }
@@ -194,9 +194,9 @@ nextflow_workflow {
             assertAll(
                 { assert workflow.success },
                 { assert snapshot(
-                        workflow.out.genome_bam_bai.collect { meta, bamfile, index -> [ meta, bam(bamfile).getHeaderMD5(), index ] },
-                        workflow.out.mt_bam_bai.collect { meta, bamfile, index -> [ meta, bam(bamfile).getReadsMD5(), index ] },
-                        workflow.out.mtshift_bam_bai.collect { meta, bamfile, index -> [ meta, bam(bamfile).getReadsMD5(), index ] },
+                        workflow.out.genome_bam_bai.collect { meta, bamfile, index -> [ meta, bam(bamfile).getHeaderMD5(), index ] }.sort { it[0].id },
+                        workflow.out.mt_bam_bai.collect { meta, bamfile, index -> [ meta, bam(bamfile).getReadsMD5(), index ] }.sort { it[0].id },
+                        workflow.out.mtshift_bam_bai.collect { meta, bamfile, index -> [ meta, bam(bamfile).getReadsMD5(), index ] }.sort { it[0].id }  ,
                         workflow.out.versions
                     ).match()
                 }
