@@ -153,6 +153,7 @@ workflow ALIGN {
             SAMTOOLS_VIEW( ch_genome_bam_bai, ch_genome_fasta, [] )
             ch_versions   = ch_versions.mix(SAMTOOLS_VIEW.out.versions)
         }
+
     emit:
         fastp_json         = ch_fastp_json         // channel: [ val(meta), path(json) ]
         genome_marked_bam  = ch_genome_marked_bam  // channel: [ val(meta), path(bam) ]
