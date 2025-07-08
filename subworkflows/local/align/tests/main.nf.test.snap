@@ -19,7 +19,7 @@
                         }
                     },
                     "d948b0bd18f6f6526f5d8832465e1542",
-                    "earlycasualcaiman_sorted_md.bam.bai:md5,9f4b2ef1c24bd6fd6660b1958aed50ff"
+                    "earlycasualcaiman_sorted_md.bam.bai"
                 ],
                 [
                     {
@@ -38,7 +38,7 @@
                         }
                     },
                     "2530fd24192b09084f45011703bd4954",
-                    "hugelymodelbat_sorted_md.bam.bai:md5,60666327a06035997be296c2636c313c"
+                    "hugelymodelbat_sorted_md.bam.bai"
                 ],
                 [
                     {
@@ -57,7 +57,7 @@
                         }
                     },
                     "cc1385671a27d394f628d2d7868eba80",
-                    "slowlycivilbuck_sorted_md.bam.bai:md5,b6c5d2736032f5e1cb190853ca366afe"
+                    "slowlycivilbuck_sorted_md.bam.bai"
                 ]
             ],
             [
@@ -78,7 +78,7 @@
                         }
                     },
                     "9beeefe789d896c08d55e8b8d13d9623",
-                    "earlycasualcaiman_sorted_merged_md_sorted.bam.bai:md5,9ed95c6e6e2b5610a007ca3cb79653da"
+                    "earlycasualcaiman_sorted_merged_md_sorted.bam.bai"
                 ],
                 [
                     {
@@ -97,7 +97,7 @@
                         }
                     },
                     "b18998c8cf7dc417ca9a122ba1c9403d",
-                    "hugelymodelbat_sorted_merged_md_sorted.bam.bai:md5,ebc9222d03624e276c0c242e87e6618c"
+                    "hugelymodelbat_sorted_merged_md_sorted.bam.bai"
                 ],
                 [
                     {
@@ -116,7 +116,7 @@
                         }
                     },
                     "a5d6892191a2c8c1f29966448623ca1b",
-                    "slowlycivilbuck_sorted_merged_md_sorted.bam.bai:md5,35373ec0e388ae91025a4eec9897434e"
+                    "slowlycivilbuck_sorted_merged_md_sorted.bam.bai"
                 ]
             ],
             [
@@ -137,7 +137,7 @@
                         }
                     },
                     "130fb09f419109e40a6be267bfbd8c88",
-                    "earlycasualcaiman_sorted_merged_md_sorted_shifted.bam.bai:md5,4d92948adf094d3ddede8b7bd7e6ee3e"
+                    "earlycasualcaiman_sorted_merged_md_sorted_shifted.bam.bai"
                 ],
                 [
                     {
@@ -156,7 +156,7 @@
                         }
                     },
                     "97e6eaae1cda668da59e5c16a9bbcc1d",
-                    "hugelymodelbat_sorted_merged_md_sorted_shifted.bam.bai:md5,2b8cd7306bca24d1af7d3bb7b21337f7"
+                    "hugelymodelbat_sorted_merged_md_sorted_shifted.bam.bai"
                 ],
                 [
                     {
@@ -175,7 +175,7 @@
                         }
                     },
                     "427b5e476d84c5277d2d24210800ad60",
-                    "slowlycivilbuck_sorted_merged_md_sorted_shifted.bam.bai:md5,6c663c5661749b25782ac78a3ba1f242"
+                    "slowlycivilbuck_sorted_merged_md_sorted_shifted.bam.bai"
                 ]
             ],
             [
@@ -211,7 +211,7 @@
             "nf-test": "0.9.2",
             "nextflow": "25.04.3"
         },
-        "timestamp": "2025-07-07T20:37:01.281209386"
+        "timestamp": "2025-07-08T10:47:18.906258299"
     },
     "align bwameme": {
         "content": [
@@ -233,7 +233,7 @@
                         }
                     },
                     "9266e8231917cc16ff9845e50ed22801",
-                    "earlycasualcaiman_sorted_md.bam.bai:md5,47dc8ed4c73ff84f81757845c0bd6401"
+                    "earlycasualcaiman_sorted_md.bam.bai"
                 ],
                 [
                     {
@@ -252,7 +252,7 @@
                         }
                     },
                     "1df3c2e109a79ba4e7b8293aefbad8",
-                    "hugelymodelbat_sorted_md.bam.bai:md5,a05a8a744ae157f49fc56fbea4444e77"
+                    "hugelymodelbat_sorted_md.bam.bai"
                 ],
                 [
                     {
@@ -271,7 +271,7 @@
                         }
                     },
                     "645db4b1d55d6d42cba2b55eee1a630",
-                    "slowlycivilbuck_sorted_md.bam.bai:md5,f3689db2144b87ab34d86760b245bdfb"
+                    "slowlycivilbuck_sorted_md.bam.bai"
                 ]
             ],
             [
@@ -292,7 +292,7 @@
                         }
                     },
                     "ae49d126580da2d5a72ada636e1ff358",
-                    "earlycasualcaiman_sorted_merged_md_sorted.bam.bai:md5,0408c73d17c90378f9e8ba6c5aa2931d"
+                    "earlycasualcaiman_sorted_merged_md_sorted.bam.bai"
                 ],
                 [
                     {
@@ -311,7 +311,7 @@
                         }
                     },
                     "5646035310bba3a507a671aca33ca533",
-                    "hugelymodelbat_sorted_merged_md_sorted.bam.bai:md5,90820ea4c824a2e56b0b35bc00a67fc0"
+                    "hugelymodelbat_sorted_merged_md_sorted.bam.bai"
                 ],
                 [
                     {
@@ -330,7 +330,7 @@
                         }
                     },
                     "246a28939c75e40353107bc79b93d494",
-                    "slowlycivilbuck_sorted_merged_md_sorted.bam.bai:md5,015540a3bc50f6f89a791d913bbe2ce0"
+                    "slowlycivilbuck_sorted_merged_md_sorted.bam.bai"
                 ]
             ],
             [
@@ -351,7 +351,7 @@
                         }
                     },
                     "c96587f3323ea479aebf0a8ba3ee710b",
-                    "earlycasualcaiman_sorted_merged_md_sorted_shifted.bam.bai:md5,27b8d9a9ecb70a4b96dd34fa01ffb7f8"
+                    "earlycasualcaiman_sorted_merged_md_sorted_shifted.bam.bai"
                 ],
                 [
                     {
@@ -370,7 +370,7 @@
                         }
                     },
                     "9f79604c77dc54d30daff682a50399bf",
-                    "hugelymodelbat_sorted_merged_md_sorted_shifted.bam.bai:md5,07f2103399352519b190069322e8d72d"
+                    "hugelymodelbat_sorted_merged_md_sorted_shifted.bam.bai"
                 ],
                 [
                     {
@@ -389,7 +389,7 @@
                         }
                     },
                     "8d810d8acecdeadc5a0e7ea159cb1343",
-                    "slowlycivilbuck_sorted_merged_md_sorted_shifted.bam.bai:md5,a098c5077314f0d5e7dbf2cf4f910ce0"
+                    "slowlycivilbuck_sorted_merged_md_sorted_shifted.bam.bai"
                 ]
             ],
             [
@@ -422,6 +422,6 @@
             "nf-test": "0.9.2",
             "nextflow": "25.04.3"
         },
-        "timestamp": "2025-07-07T21:08:06.337138956"
+        "timestamp": "2025-07-08T10:54:20.418307597"
     }
 }

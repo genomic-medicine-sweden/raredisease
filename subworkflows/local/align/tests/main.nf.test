@@ -115,11 +115,11 @@ nextflow_workflow {
                 { assert workflow.success },
                 { assert snapshot(
                         workflow.out.genome_bam_bai
-                            .collect { meta, bamfile, index -> [ meta, bam(bamfile).getReadsMD5(), index ] },
+                            .collect { meta, bamfile, index -> [ meta, bam(bamfile).getReadsMD5(), file(index).name ] },
                         workflow.out.mt_bam_bai
-                            .collect { meta, bamfile, index -> [ meta, bam(bamfile).getReadsMD5(), index ] },
+                            .collect { meta, bamfile, index -> [ meta, bam(bamfile).getReadsMD5(), file(index).name ] },
                         workflow.out.mtshift_bam_bai
-                            .collect { meta, bamfile, index -> [ meta, bam(bamfile).getReadsMD5(), index ] },
+                            .collect { meta, bamfile, index -> [ meta, bam(bamfile).getReadsMD5(), file(index).name ] },
                         workflow.out.versions
                     ).match()
                 }
@@ -204,11 +204,11 @@ nextflow_workflow {
                 { assert workflow.success },
                 { assert snapshot(
                         workflow.out.genome_bam_bai
-                            .collect { meta, bamfile, index -> [ meta, bam(bamfile).getReadsMD5(), index ] },
+                            .collect { meta, bamfile, index -> [ meta, bam(bamfile).getReadsMD5(), file(index).name ] },
                         workflow.out.mt_bam_bai
-                            .collect { meta, bamfile, index -> [ meta, bam(bamfile).getReadsMD5(), index ] },
+                            .collect { meta, bamfile, index -> [ meta, bam(bamfile).getReadsMD5(), file(index).name ] },
                         workflow.out.mtshift_bam_bai
-                            .collect { meta, bamfile, index -> [ meta, bam(bamfile).getReadsMD5(), index ] },
+                            .collect { meta, bamfile, index -> [ meta, bam(bamfile).getReadsMD5(), file(index).name ] },
                         workflow.out.versions
                     ).match()
                 }
