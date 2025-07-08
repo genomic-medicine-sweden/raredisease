@@ -32,6 +32,9 @@
                     "@id": "assets/"
                 },
                 {
+                    "@id": "bin/"
+                },
+                {
                     "@id": "conf/"
                 },
                 {
@@ -42,6 +45,9 @@
                 },
                 {
                     "@id": "modules/"
+                },
+                {
+                    "@id": "modules/local/"
                 },
                 {
                     "@id": "modules/nf-core/"
@@ -121,7 +127,31 @@
         },
         {
             "@id": "main.nf",
-            "@type": ["File", "SoftwareSourceCode", "ComputationalWorkflow"],
+            "@type": [
+                "File",
+                "SoftwareSourceCode",
+                "ComputationalWorkflow"
+            ],
+            "creator": [
+                {
+                    "@id": "#25568561+projectoriented@users.noreply.github.com"
+                },
+                {
+                    "@id": "https://orcid.org/0000-0002-4100-9963"
+                },
+                {
+                    "@id": "https://orcid.org/0000-0003-1316-2845"
+                },
+                {
+                    "@id": "https://orcid.org/0000-0002-2219-0197"
+                },
+                {
+                    "@id": "https://orcid.org/0000-0001-7313-3734"
+                },
+                {
+                    "@id": "https://orcid.org/0000-0002-5044-7754"
+                }
+            ],
             "dateCreated": "",
             "dateModified": "2025-07-08T11:39:40Z",
             "dct:conformsTo": "https://bioschemas.org/profiles/ComputationalWorkflow/1.0-RELEASE/",
@@ -137,8 +167,29 @@
                 "wes",
                 "wgs"
             ],
-            "license": ["MIT"],
-            "name": ["nf-core/raredisease"],
+            "license": [
+                "MIT"
+            ],
+            "maintainer": [
+                {
+                    "@id": "#25568561+projectoriented@users.noreply.github.com"
+                },
+                {
+                    "@id": "https://orcid.org/0000-0002-4100-9963"
+                },
+                {
+                    "@id": "https://orcid.org/0000-0002-2219-0197"
+                },
+                {
+                    "@id": "https://orcid.org/0000-0001-7313-3734"
+                },
+                {
+                    "@id": "https://orcid.org/0000-0002-5044-7754"
+                }
+            ],
+            "name": [
+                "nf-core/raredisease"
+            ],
             "programmingLanguage": {
                 "@id": "https://w3id.org/workflowhub/workflow-ro-crate#nextflow"
             },
@@ -197,6 +248,11 @@
             "description": "Additional files"
         },
         {
+            "@id": "bin/",
+            "@type": "Dataset",
+            "description": "Scripts that must be callable from a pipeline process"
+        },
+        {
             "@id": "conf/",
             "@type": "Dataset",
             "description": "Configuration files"
@@ -215,6 +271,11 @@
             "@id": "modules/",
             "@type": "Dataset",
             "description": "Modules used by the pipeline"
+        },
+        {
+            "@id": "modules/local/",
+            "@type": "Dataset",
+            "description": "Pipeline-specific modules"
         },
         {
             "@id": "modules/nf-core/",
@@ -301,6 +362,42 @@
             "@type": "Organization",
             "name": "nf-core",
             "url": "https://nf-co.re/"
+        },
+        {
+            "@id": "#25568561+projectoriented@users.noreply.github.com",
+            "@type": "Person",
+            "email": "25568561+projectoriented@users.noreply.github.com",
+            "name": "Mei Wu"
+        },
+        {
+            "@id": "https://orcid.org/0000-0002-4100-9963",
+            "@type": "Person",
+            "email": "Gwenna.breton@gu.se",
+            "name": "Gwenna Breton"
+        },
+        {
+            "@id": "https://orcid.org/0000-0003-1316-2845",
+            "@type": "Person",
+            "email": "raysloks@gmail.com",
+            "name": "Emil Bertilsson"
+        },
+        {
+            "@id": "https://orcid.org/0000-0002-2219-0197",
+            "@type": "Person",
+            "email": "jemten@users.noreply.github.com",
+            "name": "Anders Jemt"
+        },
+        {
+            "@id": "https://orcid.org/0000-0001-7313-3734",
+            "@type": "Person",
+            "email": "20065894+ramprasadn@users.noreply.github.com",
+            "name": "Ramprasad Neethiraj"
+        },
+        {
+            "@id": "https://orcid.org/0000-0002-5044-7754",
+            "@type": "Person",
+            "email": "lucia.pena.perez@scilifelab.se",
+            "name": "Luc\u00eda Pe\u00f1a-P\u00e9rez"
         }
     ]
 }
