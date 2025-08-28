@@ -31,7 +31,7 @@ workflow GENERATE_CLINICAL_SET {
             ch_versions = ch_versions.mix( BCFTOOLS_FILTER.out.versions )
         } else {
             ENSEMBLVEP_FILTERVEP(
-                ch_clin_research_vcf.clinical, 
+                ch_clin_research_vcf.clinical,
                 ch_hgnc_ids
             )
             .output
