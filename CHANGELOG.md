@@ -3,6 +3,12 @@
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## v2.5.2 - Fulliautomatix (patch) [2025-09-04]
+
+### `Changed`
+
+- Skip VEP-based filtering on mitochondrial variants using HGNC IDs. [GMS #2](https://github.com/genomic-medicine-sweden/raredisease/pull/2)
+
 ## v2.5.1 - Fulliautomatix (patch) [2025-07-04]
 
 ### `Changed`
