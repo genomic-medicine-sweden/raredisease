@@ -98,7 +98,7 @@ workflow QC_BAM {
         qualimap_results = ch_qualimap                               // channel: [ val(meta), path(qualimap_dir) ]
         tiddit_wig       = TIDDIT_COV.out.wig                        // channel: [ val(meta), path(wig) ]
         bigwig           = UCSC_WIGTOBIGWIG.out.bw                   // channel: [ val(meta), path(bw) ]
-        d4               = MOSDEPTH.out.per-base.bed.gz              // channel: [ val(meta), path(per_base_bed) ]
+        per_base_bed     = MOSDEPTH.out.per_base_bed                 // channel: [ val(meta), path(bed) ]
         global_dist      = MOSDEPTH.out.global_txt                   // channel: [ val(meta), path(txt) ]
         d4               = D4TOOLS_CREATE.out.d4                     // channel: [ val(meta), path(d4) ]
         sex_check        = NGSBITS_SAMPLEGENDER.out.tsv              // channel: [ val(meta), path(tsv) ]
