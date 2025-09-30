@@ -8,7 +8,7 @@ process D4TOOLS_CREATE {
         'biocontainers/d4tools:0.3.11--h3ab6199_2' }"
 
     input:
-    tuple val(meta), path(bam)
+    tuple val(meta), path(bam), path(bai)
 
     output:
     tuple val(meta), path("*.d4"), emit: d4

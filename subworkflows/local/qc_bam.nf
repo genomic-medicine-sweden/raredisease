@@ -62,7 +62,7 @@ workflow QC_BAM {
         ch_bam_bai.map{ meta, bam, bai -> [meta, bam, bai, []]}.set{ch_mosdepth_in}
         MOSDEPTH (ch_mosdepth_in, ch_genome_fasta)
 
-        D4TOOLS_CREATE(ch_bam)
+        D4TOOLS_CREATE(ch_bam_bai)
 
         // COLLECT WGS METRICS
         if (!params.analysis_type.equals("wes")) {
