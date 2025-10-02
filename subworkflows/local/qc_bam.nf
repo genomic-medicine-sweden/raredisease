@@ -5,6 +5,7 @@
 include { PICARD_COLLECTMULTIPLEMETRICS                            } from '../../modules/nf-core/picard/collectmultiplemetrics/main'
 include { PICARD_COLLECTHSMETRICS                                  } from '../../modules/nf-core/picard/collecthsmetrics/main'
 include { CHROMOGRAPH as CHROMOGRAPH_COV                           } from '../../modules/nf-core/chromograph/main'
+include { D4TOOLS_CREATE                                           } from '../../modules/local/d4tools/main'
 include { QUALIMAP_BAMQC                                           } from '../../modules/nf-core/qualimap/bamqc/main'
 include { TIDDIT_COV                                               } from '../../modules/nf-core/tiddit/cov/main'
 include { MOSDEPTH                                                 } from '../../modules/nf-core/mosdepth/main'
@@ -61,6 +62,8 @@ workflow QC_BAM {
         ch_bam_bai.map{ meta, bam, bai -> [meta, bam, bai, []]}.set{ch_mosdepth_in}
         MOSDEPTH (ch_mosdepth_in, ch_genome_fasta)
 
+        D4TOOLS_CREATE(ch_bam_bai)
+
         // COLLECT WGS METRICS
         if (!params.analysis_type.equals("wes")) {
             PICARD_COLLECTWGSMETRICS_WG ( ch_bam_bai, ch_genome_fasta, ch_genome_fai, ch_intervals_wgs )
@@ -85,6 +88,7 @@ workflow QC_BAM {
         ch_versions = ch_versions.mix(TIDDIT_COV.out.versions.first())
         ch_versions = ch_versions.mix(UCSC_WIGTOBIGWIG.out.versions.first())
         ch_versions = ch_versions.mix(MOSDEPTH.out.versions.first())
+        ch_versions = ch_versions.mix(D4TOOLS_CREATE.out.versions.first())
         ch_versions = ch_versions.mix(NGSBITS_SAMPLEGENDER.out.versions.first())
         ch_versions = ch_versions.mix(VERIFYBAMID_VERIFYBAMID2.out.versions.first())
 
@@ -94,8 +98,9 @@ workflow QC_BAM {
         qualimap_results = ch_qualimap                               // channel: [ val(meta), path(qualimap_dir) ]
         tiddit_wig       = TIDDIT_COV.out.wig                        // channel: [ val(meta), path(wig) ]
         bigwig           = UCSC_WIGTOBIGWIG.out.bw                   // channel: [ val(meta), path(bw) ]
-        d4               = MOSDEPTH.out.per_base_d4                  // channel: [ val(meta), path(d4) ]
+        per_base_bed     = MOSDEPTH.out.per_base_bed                 // channel: [ val(meta), path(bed) ]
         global_dist      = MOSDEPTH.out.global_txt                   // channel: [ val(meta), path(txt) ]
+        d4               = D4TOOLS_CREATE.out.d4                     // channel: [ val(meta), path(d4) ]
         sex_check        = NGSBITS_SAMPLEGENDER.out.tsv              // channel: [ val(meta), path(tsv) ]
         self_sm          = VERIFYBAMID_VERIFYBAMID2.out.self_sm      // channel: [ val(meta), path(selfSM) ]
         cov              = ch_cov                                    // channel: [ val(meta), path(metrics) ]
