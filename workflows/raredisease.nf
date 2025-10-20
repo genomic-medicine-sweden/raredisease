@@ -548,7 +548,6 @@ workflow RAREDISEASE {
         // ANNOTATE GENOME SNVs
         //
         if (!params.skip_snv_annotation) {
-
             ANNOTATE_GENOME_SNVS (
                 CALL_SNV.out.genome_vcf_tabix,
                 params.analysis_type,
@@ -566,6 +565,7 @@ workflow RAREDISEASE {
                 ch_samples,
                 ch_scatter_split_intervals,
                 ch_vep_extra_files,
+                ch_genome_fai,
                 ch_genome_chrsizes
             ).set { ch_snv_annotate }
             ch_versions = ch_versions.mix(ch_snv_annotate.versions)
@@ -619,7 +619,8 @@ workflow RAREDISEASE {
                 params.genome,
                 params.vep_cache_version,
                 ch_vep_cache,
-                ch_vep_extra_files
+                ch_vep_extra_files,
+                ch_genome_fai
             ).set { ch_mt_annotate }
             ch_versions = ch_versions.mix(ch_mt_annotate.versions)
 

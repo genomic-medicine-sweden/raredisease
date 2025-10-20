@@ -40,6 +40,7 @@ workflow ANNOTATE_GENOME_SNVS {
         ch_samples            // channel: [mandatory] [ val(sample_meta) ]
         ch_split_intervals    // channel: [mandatory] [ path(intervals) ]
         ch_vep_extra_files    // channel: [mandatory] [ path(files) ]
+        ch_genome_fai         // channel: [mandatory] [ path(fai) ]
         ch_genome_chrsizes    // channel: [mandatory] [ path(sizes) ]
 
     main:
@@ -90,7 +91,8 @@ workflow ANNOTATE_GENOME_SNVS {
             ANNOTATE_CADD (
                 ch_cadd_in,
                 ch_cadd_header,
-                ch_cadd_resources
+                ch_cadd_resources,
+                ch_genome_fai
             )
             ch_cadd_vcf = ANNOTATE_CADD.out.vcf
             ch_versions = ch_versions.mix(ANNOTATE_CADD.out.versions)
