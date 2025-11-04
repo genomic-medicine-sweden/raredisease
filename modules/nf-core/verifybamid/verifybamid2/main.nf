@@ -51,7 +51,7 @@ process VERIFYBAMID_VERIFYBAMID2 {
 
     cat <<-END_VERSIONS > versions.yml
     "${task.process}":
-        verifybamid: \$(echo \$(verifybamid2 --help 2>&1) | grep 'Version' |sed -e 's/ Version://')
+        verifybamid: \$(echo \$(verifybamid2 --help 2>&1 | sed -e '3p;d' | sed -e 's/ Version://'))
     END_VERSIONS
     """
 
@@ -67,7 +67,7 @@ process VERIFYBAMID_VERIFYBAMID2 {
 
     cat <<-END_VERSIONS > versions.yml
     "${task.process}":
-        verifybamid: \$(echo \$(verifybamid2 --help 2>&1) | grep 'Version' |sed -e 's/ Version://')
+        verifybamid: \$(echo \$(verifybamid2 --help 2>&1 | sed -e '3p;d' | sed -e 's/ Version://'))
     END_VERSIONS
     """
 }
