@@ -440,7 +440,7 @@ workflow RAREDISEASE {
 
     if (!params.skip_mt_subsample && (params.analysis_type.equals("wgs") || params.run_mt_for_wes)) {
         SUBSAMPLE_MT(
-            ch_mapped.mt_bam,
+            ch_mapped.mt_bam_bai,
             params.mt_subsample_rd,
             params.mt_subsample_seed
         )
@@ -517,8 +517,8 @@ workflow RAREDISEASE {
     if (!params.skip_snv_calling) {
         CALL_SNV (
             ch_mapped.genome_bam_bai,
-            ch_mapped.mt_bam_bai,
-            ch_mapped.mtshift_bam_bai,
+            ch_mapped.mt_bam_bai_mtsub,
+            ch_mapped.mtshift_bam_bai_mtsub,
             ch_genome_chrsizes,
             ch_genome_fasta,
             ch_genome_fai,
@@ -667,11 +667,9 @@ workflow RAREDISEASE {
             ch_mapped.genome_marked_bai,
             ch_mapped.genome_bam_bai,
             ch_mapped.mt_bam_bai,
-            ch_mapped.mtshift_bam_bai,
             ch_genome_bwaindex,
             ch_genome_fasta,
             ch_genome_fai,
-            ch_mtshift_fasta,
             ch_case_info,
             ch_target_bed,
             ch_genome_dictionary,
