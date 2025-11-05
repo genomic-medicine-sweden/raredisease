@@ -440,7 +440,7 @@ workflow RAREDISEASE {
 
     if (!params.skip_mt_subsample && (params.analysis_type.equals("wgs") || params.run_mt_for_wes)) {
         SUBSAMPLE_MT(
-            ch_mapped.mt_bam_bai,
+            ch_mapped.mt_bam,
             params.mt_subsample_rd,
             params.mt_subsample_seed
         )

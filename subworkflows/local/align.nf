@@ -100,7 +100,7 @@ workflow ALIGN {
 
             ALIGN_MT (
                 CONVERT_MT_BAM_TO_FASTQ.out.fastq,
-                CONVERT_MT_BAM_TO_FASTQ.out.bam,
+                CONVERT_MT_BAM_TO_FASTQ.out.ubam,
                 ch_mt_bwaindex,
                 ch_mt_bwamem2index,
                 ch_mt_fasta,
@@ -110,7 +110,7 @@ workflow ALIGN {
 
             ALIGN_MT_SHIFT (
                 CONVERT_MT_BAM_TO_FASTQ.out.fastq,
-                CONVERT_MT_BAM_TO_FASTQ.out.bam,
+                CONVERT_MT_BAM_TO_FASTQ.out.ubam,
                 ch_mtshift_bwaindex,
                 ch_mtshift_bwamem2index,
                 ch_mtshift_fasta,
@@ -118,6 +118,7 @@ workflow ALIGN {
                 ch_mtshift_fai
             )
 
+            ch_mt_bam             = CONVERT_MT_BAM_TO_FASTQ.out.bam
             ch_mt_marked_bam      = ALIGN_MT.out.marked_bam
             ch_mt_marked_bai      = ALIGN_MT.out.marked_bai
             ch_mt_bam_bai         = ch_mt_marked_bam.join(ch_mt_marked_bai, failOnMismatch:true, failOnDuplicate:true)
@@ -140,6 +141,7 @@ workflow ALIGN {
         genome_marked_bai  = ch_genome_marked_bai  // channel: [ val(meta), path(bai) ]
         genome_bam_bai     = ch_genome_bam_bai     // channel: [ val(meta), path(bam), path(bai) ]
         markdup_metrics    = ch_markdup_metrics    // channel: [ val(meta), path(txt) ]
+        mt_bam             = ch_mt_bam             // channel: [ val(meta), path(bam) ]
         mt_marked_bam      = ch_mt_marked_bam      // channel: [ val(meta), path(bam) ]
         mt_marked_bai      = ch_mt_marked_bai      // channel: [ val(meta), path(bai) ]
         mt_bam_bai         = ch_mt_bam_bai         // channel: [ val(meta), path(bam), path(bai) ]

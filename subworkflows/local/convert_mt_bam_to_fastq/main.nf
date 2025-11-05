@@ -31,6 +31,7 @@ workflow CONVERT_MT_BAM_TO_FASTQ {
 
     emit:
         fastq    = GATK4_SAMTOFASTQ_MT.out.fastq // channel: [ val(meta), [ path(fastq) ] ]
-        bam      = GATK4_REVERTSAM_MT.out.bam    // channel: [ val(meta), path(bam) ]
+        bam      = GATK4_PRINTREADS_MT.out.bam   // channel: [ val(meta), path(bam) ]
+        ubam     = GATK4_REVERTSAM_MT.out.bam    // channel: [ val(meta), path(bam) ]
         versions = ch_versions                   // channel: [ path(versions.yml) ]
 }
