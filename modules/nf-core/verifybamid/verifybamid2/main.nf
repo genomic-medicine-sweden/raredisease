@@ -51,7 +51,7 @@ process VERIFYBAMID_VERIFYBAMID2 {
 
     cat <<-END_VERSIONS > versions.yml
     "${task.process}":
-        verifybamid: \$(echo $(verifybamid2 --help 2>&1) | grep -oE 'Version:[[:space:]]*[0-9.]+' | sed 's/Version:[[:space:]]*//')
+        verifybamid: \$(verifybamid2 --help 2>&1 | grep -oE 'Version:[[:space:]]*[0-9.]+' | sed 's/Version:[[:space:]]*//')
     END_VERSIONS
     """
 
@@ -67,7 +67,7 @@ process VERIFYBAMID_VERIFYBAMID2 {
 
     cat <<-END_VERSIONS > versions.yml
     "${task.process}":
-        verifybamid: \$(echo $(verifybamid2 --help 2>&1) | grep -oE 'Version:[[:space:]]*[0-9.]+' | sed 's/Version:[[:space:]]*//')
+        verifybamid: \$(verifybamid2 --help 2>&1 | grep -oE 'Version:[[:space:]]*[0-9.]+' | sed 's/Version:[[:space:]]*//')
     END_VERSIONS
     """
 }
