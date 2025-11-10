@@ -2,7 +2,8 @@ process GENS {
     tag "$meta.id"
     label 'process_medium'
 
-    container 'docker.io/rannickscilifelab/gens:4.3.1'
+    // container 'docker.io/clinicalgenomics/gens_preproc:1.0.11'
+    container 'docker.io/rannickscilifelab/gens_preproc:4.3.1'
 
     input:
     tuple val(meta), path(read_counts)
@@ -24,7 +25,7 @@ process GENS {
     def prefix = task.ext.prefix ?: "${meta.id}"
     def VERSION = "1.0.11" // WARN: Version information not provided by tool on CLI. Please update version string below when bumping container versions.
     """
-    generate_gens_data.pl \\
+    python generate_gens_data.py \\
         $read_counts \\
         $gvcf \\
         $prefix \\
