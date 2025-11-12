@@ -29,7 +29,7 @@ process GENS {
         --gvcf $gvcf \\
         --label $prefix \\
         --baf_positions $gnomad_positions \\
-        --outdir .
+        --outdir \$PWD
 
     cat <<-END_VERSIONS > versions.yml
     "${task.process}":
