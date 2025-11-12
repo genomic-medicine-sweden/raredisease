@@ -25,7 +25,7 @@ process GENS {
     def prefix = task.ext.prefix ?: "${meta.id}"
     def VERSION = "1.0.11" // WARN: Version information not provided by tool on CLI. Please update version string below when bumping container versions.
     """
-    python /bin/generate_gens_data.py \\
+    generate_gens_data.py \\
         $read_counts \\
         $gvcf \\
         $prefix \\
