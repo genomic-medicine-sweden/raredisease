@@ -11,11 +11,9 @@ process GENS {
     path  gnomad_positions
 
     output:
-    tuple val(meta), path('*.cov.bed.gz')    , emit: cov
-    tuple val(meta), path('*.cov.bed.gz.tbi'), emit: cov_index
-    tuple val(meta), path('*.baf.bed.gz')    , emit: baf
-    tuple val(meta), path('*.baf.bed.gz.tbi'), emit: baf_index
-    path  "versions.yml"                     , emit: versions
+    tuple val(meta), path('*.cov.bed')    , emit: cov
+    tuple val(meta), path('*.baf.bed')    , emit: baf
+    path  "versions.yml"                  , emit: versions
 
     script:
     // Exit if running this module with -profile conda / -profile mamba
@@ -40,10 +38,8 @@ process GENS {
     stub:
     def prefix = task.ext.prefix ?: "${meta.id}"
     """
-    touch ${prefix}.baf.bed.gz
-    touch ${prefix}.baf.bed.gz.tbi
-    touch ${prefix}.cov.bed.gz
-    touch ${prefix}.cov.bed.gz.tbi
+    touch ${prefix}.baf.bed
+    touch ${prefix}.cov.bed
 
     cat <<-END_VERSIONS > versions.yml
     "${task.process}":

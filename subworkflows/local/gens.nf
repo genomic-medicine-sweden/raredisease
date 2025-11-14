@@ -6,6 +6,8 @@ include { GATK4_COLLECTREADCOUNTS as COLLECTREADCOUNTS        } from '../../modu
 include { GATK4_DENOISEREADCOUNTS as DENOISEREADCOUNTS_FEMALE } from '../../modules/nf-core/gatk4/denoisereadcounts/main'
 include { GATK4_DENOISEREADCOUNTS as DENOISEREADCOUNTS_MALE   } from '../../modules/nf-core/gatk4/denoisereadcounts/main'
 include { GENS as GENS_GENERATE                               } from '../../modules/local/gens/main'
+include { TABIX_TABIX as GENS_GENERATE_BAF_INDEX              } from '../../modules/nf-core/tabix/tabix/main'
+include { TABIX_TABIX as GENS_GENERATE_COV_INDEX              } from '../../modules/nf-core/tabix/tabix/main'
 
 workflow GENS {
     take:
@@ -59,6 +61,11 @@ workflow GENS {
             ch_gvcf,
             ch_gnomad_pos
         )
+
+        GENS_GENERATE_BAF_INDEX (GENS_GENERATE.out.baf)
+
+        GENS_GENERATE_COV_INDEX (GENS_GENERATE.out.cov)
+
 
         ch_versions = ch_versions.mix(COLLECTREADCOUNTS.out.versions.first())
         ch_versions = ch_versions.mix(DENOISEREADCOUNTS_FEMALE.out.versions.first())
