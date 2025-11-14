@@ -3,7 +3,7 @@ process GENS {
     label 'process_medium'
 
     // container 'docker.io/clinicalgenomics/gens_preproc:1.0.11'
-    container 'docker.io/rannickscilifelab/gens_preproc:4.3.1'
+    container 'docker.io/rannickscilifelab/gens_preproc:1.1.1'
 
     input:
     tuple val(meta), path(read_counts)
