@@ -23,7 +23,7 @@ workflow SUBSAMPLE_MT_READS {
 
         GAWK(SAMTOOLS_COLLATE.out.sam, [], false)
 
-        SAMTOOLS_COLLATE.out.sam.map {meta, sam -> return [meta, sam, []] }.set {ch_convert_to_bam}
+        GAWK.out.output.map {meta, sam -> return [meta, sam, []] }.set {ch_convert_to_bam}
 
         SAM_TO_BAM(ch_convert_to_bam, [[:],[]], [])
 
