@@ -6,8 +6,8 @@ include { GATK4_COLLECTREADCOUNTS as COLLECTREADCOUNTS        } from '../../modu
 include { GATK4_DENOISEREADCOUNTS as DENOISEREADCOUNTS_FEMALE } from '../../modules/nf-core/gatk4/denoisereadcounts/main'
 include { GATK4_DENOISEREADCOUNTS as DENOISEREADCOUNTS_MALE   } from '../../modules/nf-core/gatk4/denoisereadcounts/main'
 include { GENS as GENS_GENERATE                               } from '../../modules/local/gens/main'
-include { TABIX_TABIX as GENS_GENERATE_BAF_INDEX              } from '../../modules/nf-core/tabix/tabix/main'
-include { TABIX_TABIX as GENS_GENERATE_COV_INDEX              } from '../../modules/nf-core/tabix/tabix/main'
+include { TABIX_BGZIPTABIX as GENS_GENERATE_BAF_INDEX         } from '../../modules/nf-core/tabix/bgziptabix/main'
+include { TABIX_BGZIPTABIX as GENS_GENERATE_COV_INDEX         } from '../../modules/nf-core/tabix/bgziptabix/main'
 
 workflow GENS {
     take:
