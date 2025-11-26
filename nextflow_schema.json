@@ -666,6 +666,13 @@
                     "type": "boolean",
                     "description": "Specifies whether or not to filter results based on a list of candidate genes specified in 'vep_filters'.",
                     "fa_icon": "fas fa-toggle-on"
+                },
+                "subsample_approach": {
+                    "type": "string",
+                    "default": "fraction",
+                    "description": "Subsample based on fraction of reads or number of reads",
+                    "enum": ["fraction", "reads"],
+                    "fa_icon": "fas fa-align-center"
                 }
             }
         },
