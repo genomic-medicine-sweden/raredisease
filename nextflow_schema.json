@@ -317,7 +317,7 @@
                     "mimetype": "text/csv",
                     "schema": "assets/rtg_truthvcfs_schema.json"
                 },
-                "sambamba_depth_regions": {
+                "sambamba_regions": {
                     "type": "string",
                     "pattern": "^\\S+\\.bed$",
                     "format": "file-path",
