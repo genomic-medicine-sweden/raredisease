@@ -9,7 +9,7 @@ include { D4TOOLS_CREATE                                           } from '../..
 include { QUALIMAP_BAMQC                                           } from '../../modules/nf-core/qualimap/bamqc/main'
 include { TIDDIT_COV                                               } from '../../modules/nf-core/tiddit/cov/main'
 include { MOSDEPTH                                                 } from '../../modules/nf-core/mosdepth/main'
-include { SAMBAMBA_DEPTH                                           } from '../modules/nf-core/sambamba/depth/main'
+include { SAMBAMBA_DEPTH                                           } from '../../modules/nf-core/sambamba/depth/main'
 include { UCSC_WIGTOBIGWIG                                         } from '../../modules/nf-core/ucsc/wigtobigwig/main'
 include { PICARD_COLLECTWGSMETRICS as PICARD_COLLECTWGSMETRICS_WG  } from '../../modules/nf-core/picard/collectwgsmetrics/main'
 include { PICARD_COLLECTWGSMETRICS as PICARD_COLLECTWGSMETRICS_Y   } from '../../modules/nf-core/picard/collectwgsmetrics/main'
