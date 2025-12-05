@@ -42,7 +42,6 @@ workflow QC_BAM {
         ch_cov_y    = Channel.empty()
         ch_versions = Channel.empty()
         ch_qualimap = Channel.empty()
-        ch_sambamba_depth_bed = Channel.empty()
 
         PICARD_COLLECTMULTIPLEMETRICS (ch_bam_bai, ch_genome_fasta, ch_genome_fai)
 
@@ -69,9 +68,6 @@ workflow QC_BAM {
 
         SAMBAMBA_DEPTH(ch_bam_bai, ch_sambamba_bed, 'region')
         ch_versions = ch_versions.mix(SAMBAMBA_DEPTH.out.versions)
-
-        SAMBAMBA_DEPTH.out.bed
-            .set { ch_sambamba_depth_bed }
 
         // COLLECT WGS METRICS
         if (!params.analysis_type.equals("wes")) {
