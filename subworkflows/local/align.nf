@@ -34,19 +34,20 @@ workflow ALIGN {
         val_sort_threads         // integer: [mandatory] number of sorting threads
 
     main:
-        ch_bwamem2_bam        = Channel.empty()
-        ch_bwamem2_bai        = Channel.empty()
-        ch_fastp_json         = Channel.empty()
-        ch_markdup_metrics    = Channel.empty()
-        ch_mt_bam_bai         = Channel.empty()
-        ch_mt_marked_bam      = Channel.empty()
-        ch_mt_marked_bai      = Channel.empty()
-        ch_mtshift_bam_bai    = Channel.empty()
-        ch_mtshift_marked_bam = Channel.empty()
-        ch_mtshift_marked_bai = Channel.empty()
-        ch_sentieon_bam       = Channel.empty()
-        ch_sentieon_bai       = Channel.empty()
-        ch_versions           = Channel.empty()
+        ch_bwamem2_bam           = Channel.empty()
+        ch_bwamem2_bai           = Channel.empty()
+        ch_fastp_json            = Channel.empty()
+        ch_markdup_metrics       = Channel.empty()
+        ch_mt_bam_bai            = Channel.empty()
+        ch_mt_marked_bam         = Channel.empty()
+        ch_mt_marked_bai         = Channel.empty()
+        ch_mt_bam_bai_mtsub      = Channel.empty()
+        ch_mtshift_bam_bai_mtsub = Channel.empty()
+        ch_mtshift_marked_bam    = Channel.empty()
+        ch_mtshift_marked_bai    = Channel.empty()
+        ch_sentieon_bam          = Channel.empty()
+        ch_sentieon_bai          = Channel.empty()
+        ch_versions              = Channel.empty()
 
         if (!params.skip_fastp) {
             FASTP (ch_reads, [], false, false, false)
