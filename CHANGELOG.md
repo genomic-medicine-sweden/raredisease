@@ -7,6 +7,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### `Added`
 
+- HTML output is now emitted for rundeepvariant. [GMS #15](https://github.com/genomic-medicine-sweden/raredisease/pull/15)
 - Feature to subsample mitochondrial alignments based on number of reads. [GMS #12](https://github.com/genomic-medicine-sweden/raredisease/pull/12)
 - Functionality to generate coverage information using Sambamba depth [GMS #16](https://github.com/genomic-medicine-sweden/raredisease/pull/16)
 
