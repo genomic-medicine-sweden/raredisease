@@ -7,6 +7,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### `Changed`
 
+- D4tools no longer does compression of d4 files as default [GMS #7](https://github.com/genomic-medicine-sweden/raredisease/pull/7)
 - Sambamba depth now filters on not duplicates and not failed_quality_control [GMS #20](https://github.com/genomic-medicine-sweden/raredisease/pull/20)
 
 ### `Fixed`
