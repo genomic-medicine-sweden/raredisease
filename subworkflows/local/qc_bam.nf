@@ -9,6 +9,7 @@ include { D4TOOLS_CREATE                                           } from '../..
 include { QUALIMAP_BAMQC                                           } from '../../modules/nf-core/qualimap/bamqc/main'
 include { TIDDIT_COV                                               } from '../../modules/nf-core/tiddit/cov/main'
 include { MOSDEPTH                                                 } from '../../modules/nf-core/mosdepth/main'
+include { SAMBAMBA_DEPTH                                           } from '../../modules/nf-core/sambamba/depth/main'
 include { UCSC_WIGTOBIGWIG                                         } from '../../modules/nf-core/ucsc/wigtobigwig/main'
 include { PICARD_COLLECTWGSMETRICS as PICARD_COLLECTWGSMETRICS_WG  } from '../../modules/nf-core/picard/collectwgsmetrics/main'
 include { PICARD_COLLECTWGSMETRICS as PICARD_COLLECTWGSMETRICS_Y   } from '../../modules/nf-core/picard/collectwgsmetrics/main'
@@ -33,6 +34,7 @@ workflow QC_BAM {
         ch_svd_bed                  // channel: [optional] [ path(bed) ]
         ch_svd_mu                   // channel: [optional] [ path(meanpath) ]
         ch_svd_ud                   // channel: [optional] [ path(ud) ]
+        ch_sambamba_bed             // channel: [ val(meta), bed ]
         ngsbits_samplegender_method // channel: [val(method)]
 
     main:
@@ -63,6 +65,9 @@ workflow QC_BAM {
         MOSDEPTH (ch_mosdepth_in, ch_genome_fasta)
 
         D4TOOLS_CREATE(ch_bam_bai)
+
+        SAMBAMBA_DEPTH(ch_bam_bai, ch_sambamba_bed, 'region')
+        ch_versions = ch_versions.mix(SAMBAMBA_DEPTH.out.versions)
 
         // COLLECT WGS METRICS
         if (!params.analysis_type.equals("wes")) {
