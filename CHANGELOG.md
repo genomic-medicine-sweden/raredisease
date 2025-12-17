@@ -5,6 +5,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## v2.5.5 - Fulliautomatix (patch) [2025-12-xx]
 
+### `Changed`
+- Sambamba depth now filters on not duplicates and not failed_quality_control [GMS #20](https://github.com/genomic-medicine-sweden/raredisease/pull/20)
+
 ### `Fixed`
 - Publish mt_subsample.bam.bai in SUBSAMPLE_MT_READS config [GMS #19](https://github.com/genomic-medicine-sweden/raredisease/pull/19)
 
