@@ -19,6 +19,7 @@ process DEEPVARIANT_RUNDEEPVARIANT {
     tuple val(meta), path("${prefix}.vcf.gz.tbi")  ,  emit: vcf_tbi
     tuple val(meta), path("${prefix}.g.vcf.gz")    ,  emit: gvcf
     tuple val(meta), path("${prefix}.g.vcf.gz.tbi"),  emit: gvcf_tbi
+    tuple val(meta), path("${prefix}.visual_report.html") , emit: report, optional: true
     path "versions.yml"                            ,  emit: versions
 
     when:
