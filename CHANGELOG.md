@@ -3,7 +3,12 @@
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## v2.5.4 - Fulliautomatix (patch) [2025-10-xx]
+## v2.5.5 - Fulliautomatix (patch) [2025-12-xx]
+
+### `Fixed`
+- Publish mt_subsample.bam.bai in SUBSAMPLE_MT_READS config [GMS #19](https://github.com/genomic-medicine-sweden/raredisease/pull/19)
+
+## v2.5.4 - Fulliautomatix (patch) [2025-12-10]
 
 ### `Added`
 
