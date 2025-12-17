@@ -18,7 +18,7 @@ process D4TOOLS_CREATE {
     task.ext.when == null || task.ext.when
 
     script:
-    def args   = task.ext.args ?: '-Az'
+    def args   = task.ext.args ?: ''
     def prefix = task.ext.prefix ?: "${meta.id}"
 
     """
