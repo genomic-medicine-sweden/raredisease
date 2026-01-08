@@ -32,7 +32,6 @@ workflow GENERATE_CLINICAL_SET {
             ch_clinical_filtered = BCFTOOLS_FILTER.out.vcf
             ch_versions = ch_versions.mix( BCFTOOLS_FILTER.out.versions )
 
-            // Apply bcftools +setGT filter to both clinical and research variants
             BCFTOOLS_PLUGINSETGT (ch_clinical_filtered.mix(ch_clin_research_vcf.research))
             ch_clinical = BCFTOOLS_PLUGINSETGT.out.vcf.filter { meta, vcf -> meta.set == "clinical" }
             ch_research = BCFTOOLS_PLUGINSETGT.out.vcf.filter { meta, vcf -> meta.set == "research" }
