@@ -256,22 +256,26 @@
                     "genmod/annotate": {
                         "branch": "master",
                         "git_sha": "91a84f951358143e93dc9e03470db4e6a4a7105c",
-                        "installed_by": ["modules"]
+                        "installed_by": ["modules"],
+                        "patch": "modules/nf-core/genmod/annotate/genmod-annotate.diff"
                     },
                     "genmod/compound": {
                         "branch": "master",
                         "git_sha": "91a84f951358143e93dc9e03470db4e6a4a7105c",
-                        "installed_by": ["modules"]
+                        "installed_by": ["modules"],
+                        "patch": "modules/nf-core/genmod/compound/genmod-compound.diff"
                     },
                     "genmod/models": {
                         "branch": "master",
                         "git_sha": "f888300c726e1f817a9f93a680866ff7e6c669f6",
-                        "installed_by": ["modules"]
+                        "installed_by": ["modules"],
+                        "patch": "modules/nf-core/genmod/models/genmod-models.diff"
                     },
                     "genmod/score": {
                         "branch": "master",
                         "git_sha": "f888300c726e1f817a9f93a680866ff7e6c669f6",
-                        "installed_by": ["modules"]
+                        "installed_by": ["modules"],
+                        "patch": "modules/nf-core/genmod/score/genmod-score.diff"
                     },
                     "glnexus": {
                         "branch": "master",

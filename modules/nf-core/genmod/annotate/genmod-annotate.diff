@@ -1,0 +1,33 @@
+Changes in component 'nf-core/genmod/annotate'
+Changes in 'genmod/annotate/environment.yml':
+--- modules/nf-core/genmod/annotate/environment.yml
++++ modules/nf-core/genmod/annotate/environment.yml
+@@ -2,4 +2,5 @@
+   - conda-forge
+   - bioconda
+ dependencies:
+-  - bioconda::genmod=3.9
++  - bioconda::genmod=3.10.2
++  - conda-forge::python=3.11.14
+
+'modules/nf-core/genmod/annotate/meta.yml' is unchanged
+Changes in 'genmod/annotate/main.nf':
+--- modules/nf-core/genmod/annotate/main.nf
++++ modules/nf-core/genmod/annotate/main.nf
+@@ -4,8 +4,8 @@
+ 
+     conda "${moduleDir}/environment.yml"
+     container "${ workflow.containerEngine == 'singularity' && !task.ext.singularity_pull_docker_container ?
+-        'https://depot.galaxyproject.org/singularity/genmod:3.9--pyhdfd78af_0':
+-        'biocontainers/genmod:3.9--pyhdfd78af_0' }"
++        'https://community-cr-prod.seqera.io/docker/registry/v2/blobs/sha256/31/31b331bee43c7ff070bdde5460a4102ba31c3bfb0ee0d70197001ff011036555/data' :
++        'community.wave.seqera.io/library/genmod_python:31b2fba4d3b7ba6f' }"
+ 
+     input:
+     tuple val(meta), path(input_vcf)
+
+'modules/nf-core/genmod/annotate/tests/tags.yml' is unchanged
+'modules/nf-core/genmod/annotate/tests/nextflow.config' is unchanged
+'modules/nf-core/genmod/annotate/tests/main.nf.test' is unchanged
+'modules/nf-core/genmod/annotate/tests/main.nf.test.snap' was removed
+************************************************************
