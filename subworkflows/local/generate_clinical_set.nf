@@ -35,7 +35,7 @@ workflow GENERATE_CLINICAL_SET {
             BCFTOOLS_PLUGINSETGT (
                 ch_clinical_filtered.mix(ch_clin_research_vcf.research).map { meta, vcf -> return [meta, vcf, []] },
                 Channel.value('q'),
-                Channel.value('c:1/1'),
+                Channel.value("c:'1/1'"),
                 [],
                 []
             )
