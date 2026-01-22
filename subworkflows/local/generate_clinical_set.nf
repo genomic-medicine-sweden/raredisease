@@ -6,6 +6,7 @@ include { ENSEMBLVEP_FILTERVEP } from '../../modules/nf-core/ensemblvep/filterve
 include { TABIX_BGZIP          } from '../../modules/nf-core/tabix/bgzip'
 include { TABIX_TABIX          } from '../../modules/nf-core/tabix/tabix'
 include { BCFTOOLS_FILTER      } from '../../modules/nf-core/bcftools/filter'
+include { BCFTOOLS_PLUGINSETGT } from '../../modules/nf-core/bcftools/pluginsetgt/main'
 
 workflow GENERATE_CLINICAL_SET {
     take:
@@ -24,11 +25,23 @@ workflow GENERATE_CLINICAL_SET {
             .set { ch_clin_research_vcf }
 
         ch_clinical = Channel.empty()
+        ch_research = Channel.empty()
 
         if (val_ismt) {
             BCFTOOLS_FILTER (ch_clin_research_vcf.clinical.map { meta, vcf -> return [meta, vcf, []]})
-            ch_clinical = BCFTOOLS_FILTER.out.vcf
+            ch_clinical_filtered = BCFTOOLS_FILTER.out.vcf
             ch_versions = ch_versions.mix( BCFTOOLS_FILTER.out.versions )
+
+            BCFTOOLS_PLUGINSETGT (
+                ch_clinical_filtered.mix(ch_clin_research_vcf.research).map { meta, vcf -> return [meta, vcf, []] },
+                Channel.value('q'),
+                Channel.value("c:'1/1'"),
+                [],
+                []
+            )
+            ch_clinical = BCFTOOLS_PLUGINSETGT.out.vcf.filter { meta, vcf -> meta.set == "clinical" }
+            ch_research = BCFTOOLS_PLUGINSETGT.out.vcf.filter { meta, vcf -> meta.set == "research" }
+            ch_versions = ch_versions.mix( BCFTOOLS_PLUGINSETGT.out.versions )
         } else {
             ENSEMBLVEP_FILTERVEP(
                 ch_clin_research_vcf.clinical,
@@ -40,11 +53,13 @@ workflow GENERATE_CLINICAL_SET {
             TABIX_BGZIP( ch_filtervep_out )
             ch_clinical = TABIX_BGZIP.out.output
 
+            ch_research = ch_clin_research_vcf.research
+
             ch_versions = ch_versions.mix( ENSEMBLVEP_FILTERVEP.out.versions )
             ch_versions = ch_versions.mix( TABIX_BGZIP.out.versions )
         }
 
-        ch_clin_research_vcf.research
+        ch_research
             .mix( ch_clinical )
             .set { ch_clin_research_split }
 
